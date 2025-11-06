@@ -1867,3 +1867,186 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+/*-----------------------------------*\
+  #PROJET DETAIL
+\*-----------------------------------*/
+
+/* Section d'en-tête (Image + Métadonnées)
+*/
+.project-detail-header {
+  display: grid;
+  grid-template-columns: 1fr; /* Une colonne sur mobile */
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.project-detail-banner {
+  width: 100%;
+  max-width: 300px; /* Limite la taille du logo */
+  border-radius: 16px; /* Cohérent avec .project-img */
+  overflow: hidden;
+  border: 1px solid var(--jet);
+}
+
+.project-detail-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--white-1); /* Fond blanc pour les logos comme MASTERING */
+}
+
+.project-detail-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes pour les métadonnées */
+  gap: 20px 30px;
+}
+
+.project-meta-item .contact-title {
+  /* Réutilise le style de la sidebar */
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.project-meta-item .h4 {
+  /* Réutilise le style H4 */
+  color: var(--white-2);
+}
+
+
+/* Sections de contenu (Description, Fonctionnalités...)
+*/
+.project-description,
+.project-features,
+.project-gallery,
+.project-deliverables {
+  margin-top: 40px;
+}
+
+/* Titres de section H3 */
+.project-description .h3,
+.project-features .h3,
+.project-gallery .h3,
+.project-deliverables .h3 {
+  margin-bottom: 25px;
+  position: relative;
+  /* Recrée la ligne de sous-titre de l'inspiration (violet)
+     mais avec votre charte (jaune/or).
+  */
+  border-bottom: 1px solid var(--jet);
+  padding-bottom: 15px;
+}
+
+.project-description .h3::after,
+.project-features .h3::after,
+.project-gallery .h3::after,
+.project-deliverables .h3::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; /* S'aligne avec la bordure */
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--text-gradient-yellow); /* Votre gradient accent */
+  border-radius: 3px;
+}
+
+
+/* Liste des fonctionnalités (Inspiration ...143642.png)
+*/
+.feature-item {
+  margin-bottom: 25px;
+}
+
+.feature-item .feature-title {
+  color: var(--white-2);
+  margin-bottom: 10px;
+  font-size: var(--fs-3); /* Un peu plus grand */
+}
+
+.feature-item .about-text {
+  /* Réutilise le style de paragraphe */
+  margin-left: 20px;
+  border-left: 2px solid var(--jet);
+  padding-left: 15px;
+}
+
+
+/* Galerie d'images
+*/
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px; /* Cohérent avec les petites cartes */
+  border: 1px solid var(--jet);
+  object-fit: cover;
+}
+
+
+/* Livrables (Inspiration ...143729.png)
+*/
+.deliverable-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.deliverable-item {
+  background: var(--eerie-black-1); /* Fond intérieur des cartes */
+  border: 1px solid var(--jet);
+  padding: 15px 20px;
+  border-radius: 14px; /* Cohérent avec .form-input */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  transition: var(--transition-1);
+}
+
+.deliverable-item ion-icon {
+  font-size: 20px;
+  color: var(--orange-yellow-crayola); /* Icone en couleur accent */
+  flex-shrink: 0; /* Empêche l'icône de rétrécir */
+}
+
+.deliverable-item span {
+  /* Gère les textes trop longs */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.deliverable-item:hover {
+  border-color: var(--orange-yellow-crayola);
+  color: var(--white-2);
+}
+
+
+/*-----------------------------------*\
+  #RESPONSIVE (pour le détail projet)
+\*-----------------------------------*/
+
+@media (min-width: 580px) {
+  .project-detail-header {
+    grid-template-columns: 3fr 2fr;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 images par ligne */
+  }
+  
+  .deliverable-list {
+    grid-template-columns: 1fr 1fr; /* 2 liens par ligne */
+  }
+}
