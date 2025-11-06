@@ -157,3 +157,53 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// ---------------------------------------------------
+// --- CODE AJOUTÉ POUR LA PAGE DE PROJET DÉTAIL ---
+// ---------------------------------------------------
+
+// 1. On sélectionne tous les éléments nécessaires
+const projectItems = document.querySelectorAll(".project-item > a");
+const projectDetailPage = document.querySelector("[data-page='projet-detail']");
+const portfolioPage = document.querySelector("[data-page='portfolio']");
+const navLinks = document.querySelectorAll("[data-nav-link]");
+
+// 2. On ajoute un écouteur d'événement à CHAQUE projet de la grille
+projectItems.forEach(item => {
+  
+  item.addEventListener("click", function (event) {
+    
+    // Empêche le lien de recharger la page
+    event.preventDefault(); 
+
+    // --- À FAIRE PLUS TARD ---
+    // C'est ici que vous chargerez les données du bon projet
+    // (ex: changer le titre, les images, etc. de la page "projet-detail")
+    // Pour l'instant, on affiche juste la page de démo.
+    
+    // 3. On cache la page "Portfolio" (la grille)
+    portfolioPage.classList.remove("active");
+    
+    // 4. On affiche la page "projet-detail"
+    projectDetailPage.classList.add("active");
+    
+    // 5. On s'assure que le lien "Portfolio" dans la nav reste bien actif
+    navLinks.forEach(nav => {
+      if (nav.innerHTML.toLowerCase() === "portfolio") {
+        nav.classList.add("active");
+      } else {
+        nav.classList.remove("active");
+      }
+    });
+
+    // 6. On remonte en haut de la page
+    window.scrollTo(0, 0);
+    
+  });
+  
+});
+
+// Le code existant dans votre script.js (lignes 122-135)
+// gère DÉJÀ le retour à la grille quand on clique
+// sur "Portfolio" dans la barre de navigation.
+// Donc, pas besoin d'ajouter autre chose !
