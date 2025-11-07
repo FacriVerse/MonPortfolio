@@ -2170,3 +2170,178 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-size: 24px;
   }
 }
+/*-----------------------------------*\
+  # CORRECTION PROJET DETAIL
+\*-----------------------------------*/
+
+/* Force la liste des compétences
+   à rester sur 1 colonne, même sur grand écran. */
+@media (min-width: 768px) {
+  #project-detail-competences {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*-----------------------------------*\
+  # STYLE AJOUTÉ BTS SIO
+\*-----------------------------------*/
+
+/* Style pour le texte d'introduction du BTS SIO */
+.bts-intro-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 30px; /* Espace avant les cartes */
+}
+
+.bts-intro-text p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/* Style pour le sous-titre "Débouchés possibles" */
+.service-item-subtitle {
+  color: var(--orange-yellow-crayola); /* Couleur accent */
+  font-weight: var(--fw-500);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left; /* Assure l'alignement à gauche */
+}
+
+/* Style pour la liste des débouchés */
+.service-item-list {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  text-align: left; /* Assure l'alignement à gauche */
+  padding-left: 20px; /* Indentation */
+}
+
+.service-item-list li {
+  list-style-type: '› '; /* Puce personnalisée */
+  padding-left: 10px; /* Espace après la puce */
+  margin-bottom: 5px;
+}
+
+/* Force l'alignement à gauche du texte dans les cartes */
+.service-item .service-content-box {
+  text-align: left;
+}
+
+
+/*-----------------------------------*\
+  # STYLE UNIFIÉ LOGOS (SKILLS & SIO)
+\*-----------------------------------*/
+
+/* Retire le padding de la carte de base pour les skills */
+.skills-logo-list {
+  padding: 20px;
+  display: grid;
+  /* 3 colonnes sur mobile, 4 sur tablette, etc. */
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 20px;
+}
+
+/* Style de la carte individuelle (Skills) */
+.skills-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre l'icône et le texte */
+  gap: 10px; /* Espace entre l'icône et le texte */
+  
+  /* Style de la carte individuelle */
+  background: var(--onyx); /* Fond sombre */
+  border: 1px solid var(--jet);
+  padding: 20px 10px;
+  border-radius: 14px;
+  transition: var(--transition-1);
+}
+
+/* Effet au survol (Skills) */
+.skills-logo-item:hover {
+  border-color: var(--orange-yellow-crayola);
+  transform: translateY(-3px);
+}
+
+/* Style du texte sous l'icône (Skills) */
+.skills-logo-item span {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8); /* 11px ou 12px */
+  font-weight: var(--fw-300);
+  text-align: center;
+}
+
+
+/* Style de la boîte d'icône (POUR SKILLS ET SIO) */
+.skills-logo-item .icon-box-logo,
+.service-item .icon-box-logo {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange-yellow-crayola);
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+  flex-shrink: 0; /* Empêche de rétrécir */
+}
+
+/* Fond intérieur */
+.skills-logo-item .icon-box-logo::before,
+.service-item .icon-box-logo::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--eerie-black-1);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Style des icônes (Ionicons) */
+.skills-logo-item .icon-box-logo ion-icon,
+.service-item .icon-box-logo ion-icon {
+  font-size: 30px;
+  --ionicon-stroke-width: 30px;
+}
+
+/* Style des icônes (Font Awesome) */
+.skills-logo-item .icon-box-logo .fa-brands,
+.service-item .icon-box-logo .fa-brands {
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* Centrage de la boîte SIO sur mobile */
+.service-item .icon-box-logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+/* Alignement sur écrans larges */
+@media (min-width: 580px) {
+  .service-item .icon-box-logo {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+}
+/*-----------------------------------*\
+  # STYLE SECTION CERTIFICATION
+\*-----------------------------------*/
+
+.certifications {
+  /* Ajoute de l'espace au-dessus de la section */
+  margin-top: 40px; 
+}
+
+/* Force les cartes de certification à être actives
+   (le filtre du portfolio ne s'applique pas ici) */
+.certifications .project-item {
+  display: block;
+}

@@ -23,6 +23,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!--
+    - fontawesome link
+  -->
+  <script src="https://kit.fontawesome.com/ee266e5049.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -48,7 +52,7 @@
         <div class="info-content">
           <h1 class="name" title="Richard hanrick">Ali Youssouf Facridine</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title">Etudiant 2éme année bts sio</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -59,7 +63,7 @@
 
       </div>
 
-      <div class="sidebar-info_more">
+     <div class="sidebar-info_more">
 
         <div class="separator"></div>
 
@@ -74,7 +78,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">facrii942@gmail.com</a>
+              <a href="mailto:facrii942@gmail.com" class="contact-link">facrii942@gmail.com</a>
             </div>
 
           </li>
@@ -82,13 +86,15 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <ion-icon name="document-text-outline"></ion-icon>
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Phone</p>
+              <p class="contact-title">CV</p>
 
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+              <a href="./assets/docs/VOTRE_CV.pdf" class="contact-link" download target="_blank">
+                Télécharger mon CV
+              </a>
             </div>
 
           </li>
@@ -102,7 +108,7 @@
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
 
-              <time datetime="1982-06-23">7 sepyembre 2002</time>
+              <time datetime="2002-09-07">7 septembre 2002</time>
             </div>
 
           </li>
@@ -116,7 +122,7 @@
             <div class="contact-info">
               <p class="contact-title">Location</p>
 
-              <address>Ivry-Sur-Seine, Val-de-Marne, FR </address>
+              <address>Paris, France </address>
             </div>
 
           </li>
@@ -128,20 +134,14 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+            <a href="https://fr.linkedin.com/in/facridine-ali-youssouf" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+            <a href="https://github.com/FacriVerse" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
 
@@ -170,23 +170,23 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link  active" data-nav-link="about">À propos</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link="resume">Parcours</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link="portfolio">Portfolio</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link="blog">Veille</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link="contact">Contact</button>
           </li>
 
         </ul>
@@ -204,7 +204,7 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title">À propos</h2>
         </header>
 
         <section class="about-text">
@@ -228,73 +228,73 @@
           - service
         -->
 
-        <section class="service">
+      <section class="service">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+          <h3 class="h3 service-title">Qu'est ce que le BTS SIO ?</h3>
+
+          <div class="bts-intro-text">
+            <p>
+              Le Brevet de Technicien Supérieur Services Informatiques aux Organisations (BTS SIO) s’adresse à celles et ceux qui souhaitent se former en deux ans aux métiers de l’informatique, soit dans le développement d’applications, soit dans l’administration des réseaux et des systèmes.
+            </p>
+            <p>
+              Cette formation permet d’acquérir des compétences techniques et professionnelles solides afin d’intégrer directement le marché du travail ou de poursuivre des études dans le domaine de l’informatique (licence, école d’ingénieurs, etc.).
+            </p>
+          </div>
 
           <ul class="service-list">
 
             <li class="service-item">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+              <div class="icon-box-logo">
+                <ion-icon name="server-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
+                <h4 class="h4 service-item-title">Option SISR</h4>
                 <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                  L’option Solutions d’Infrastructure, Systèmes et Réseaux (SISR) forme des professionnels capables de déployer, administrer et sécuriser les réseaux et équipements informatiques d’une organisation.
+                  <br><br>
+                  Les diplômés de cette option sont en mesure de gérer les serveurs, assurer la maintenance et veiller à la sécurité du système d’information.
                 </p>
+                
+                <h5 class="h5 service-item-subtitle">Débouchés possibles :</h5>
+                <ul class="service-item-list">
+                  <li>Administrateur systèmes et réseaux</li>
+                  <li>Technicien d’infrastructure</li>
+                  <li>Informaticien support et déploiement</li>
+                  <li>Pilote d’exploitation</li>
+                  <li>Support systèmes et réseaux</li>
+                  <li>Technicien de production</li>
+                  <li>Technicien micro et réseaux</li>
+                </ul>
               </div>
 
             </li>
 
             <li class="service-item">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              <div class="icon-box-logo">
+                <ion-icon name="code-slash-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
+                <h4 class="h4 service-item-title">Option SLAM (Option choisi)</h4>
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  L’option Solutions Logicielles et Applications Métiers (SLAM) forme des spécialistes du développement d’applications adaptées aux besoins des entreprises.
+                  <br><br>
+                  Elle couvre tout le cycle de vie d’un logiciel : analyse des besoins, conception, développement, tests et intégration dans le système d’information.
                 </p>
-              </div>
 
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
+                <h5 class="h5 service-item-subtitle">Débouchés possibles :</h5>
+                <ul class="service-item-list">
+                  <li>Développeur d’applications informatiques</li>
+                  <li>Développeur web ou mobile</li>
+                  <li>Analyste programmeur</li>
+                  <li>Analyste d’applications ou d’études</li>
+                  <li>Programmeur analyste</li>
+                  <li>Responsable des services applicatifs</li>
+                  <li>Technicien d’études informatiques</li>
+                </ul>
               </div>
 
             </li>
@@ -302,157 +302,95 @@
           </ul>
 
         </section>
+        <section class="certifications">
 
+          <h3 class="h3 service-title">Certifications</h3>
 
-        <!--
-          - testimonials
-        -->
+          <ul class="project-list">
 
-        <section class="testimonials">
+            <li class="project-item active">
+              <a href="./assets/docs/CertificatRgpd .pdf" target="_blank">
 
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-1.jpg" alt="Certification SQL" loading="lazy">
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+                <h3 class="project-title">Certificat RGPD</h3>
+                <p class="project-category">2024-2025</p>
 
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
+              </a>
             </li>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+            <li class="project-item active">
+              <a href="./assets/docs/CertificatPhishing .pdf" target="_blank">
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-2.png" alt="Certification HTML" loading="lazy">
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+                <h3 class="project-title">Certificat Phishing</h3>
+                <p class="project-category">2024-2025</p>
 
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
+              </a>
             </li>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+            <li class="project-item active">
+              <a href="./assets/docs/CertificatAntiCorruption .pdf" target="_blank">
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-3.jpg" alt="Certification Commandes" loading="lazy">
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+                <h3 class="project-title">Certificat AntiCorruption</h3>
+                <p class="project-category">2024-2025</p>
 
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
+              </a>
             </li>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+            <li class="project-item active">
+              <a href="./assets/docs/VOTRE_CERTIF_4.pdf" target="_blank">
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-5.png" alt="Certification Cloud" loading="lazy">
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+                <h3 class="project-title">MOOC CYBERSECURITE ANSSI</h3>
+                <p class="project-category">2025-2026</p>
 
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
+              </a>
+            </li>
 
-              </div>
+            <li class="project-item active">
+              <a href="./assets/docs/VOTRE_CERTIF_5.pdf" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-6.png" alt="Certification Python" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MOOC CNIL RGPD</h3>
+                <p class="project-category">2025-2026</p>
+
+              </a>
             </li>
 
           </ul>
 
         </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-        <div class="modal-container" data-modal-container>
-        </div>
-
 
         <div class="modal-container gallery-modal" data-gallery-modal-container>
 
@@ -473,61 +411,13 @@
         </div>
 
 
-        <section class="clients">
-          ...
+        
 
 
 
-          <!--
-          - clients
-        -->
+        
 
-          <section class="clients">
-
-            <h3 class="h3 clients-title">Clients</h3>
-
-            <ul class="clients-list has-scrollbar">
-
-              <li class="clients-item">
-                <a href="#">
-                  <img src="./assets/images/logo-1-color.png" alt="client logo">
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img src="./assets/images/logo-2-color.png" alt="client logo">
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img src="./assets/images/logo-3-color.png" alt="client logo">
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img src="./assets/images/logo-4-color.png" alt="client logo">
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img src="./assets/images/logo-5-color.png" alt="client logo">
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="#">
-                  <img src="./assets/images/logo-6-color.png" alt="client logo">
-                </a>
-              </li>
-
-            </ul>
-
-          </section>
-
+         
       </article>
 
 
@@ -541,7 +431,7 @@
       <article class="resume" data-page="resume">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title">Parcours</h2>
         </header>
 
         <section class="timeline">
@@ -616,106 +506,117 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <h4 class="h4 timeline-item-title">Developper (Stage 2ème année)</h4>
 
-              <span>2015 — Present</span>
+              <span>Janvier 2026 — Fevrier 2026</span>
 
               <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi eveniet dolorum asperiores, labore sint
+                fugit, quod tenetur corporis eius itaque impedit aperiam dolorem aliquid voluptates voluptas harum modi.
+                Cumque, asperiores.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Art director</h4>
+              <h4 class="h4 timeline-item-title">Developper Java- CACIB (Stage 1ère année)</h4>
 
-              <span>2013 — 2015</span>
+              <span>Mai 2025 — juillet 2025</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                En mai 2025, j’ai réalisé mon stage de première année de BTS SIO (option SLAM) au sein de Crédit
+                Agricole CIB, à Montrouge. Intégré à l’équipe Crossborder – Cash Management Services IT, j’y ai
+                découvert le fonctionnement d’un grand groupe bancaire et renforcé mes compétences en développement et
+                en qualité logicielle.
               </p>
+              <a href="./assets/docs/rapportStage1.pdf" class="timeline-button" target="_blank">
+                <ion-icon name="document-text-outline"></ion-icon>
+                <span>Voir le rapport de stage</span>
+              </a>
 
             </li>
 
-            <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
 
           </ol>
 
         </section>
 
-        <section class="skill">
+       <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
+          <h3 class="h3 skills-title">Outils et Technologies</h3>
 
-          <ul class="skills-list content-card">
+          <ul class="skills-list content-card skills-logo-list">
 
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
+            <li class="skills-logo-item">
+              <div class="icon-box-logo">
+                <i class="fa-brands fa-java"></i>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
+              <span>Java</span>
             </li>
 
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
+            <li class="skills-logo-item">
+              <div class="icon-box-logo">
+                <ion-icon name="logo-javascript"></ion-icon>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
+              <span>JavaScript</span>
             </li>
 
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
+            <li class="skills-logo-item">
+              <div class="icon-box-logo">
+                <ion-icon name="logo-html5"></ion-icon>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
+              <span>HTML5</span>
+            </li>
+            
+            <li class="skills-logo-item">
+              <div class="icon-box-logo">
+                <ion-icon name="logo-css3"></ion-icon>
               </div>
-
+              <span>CSS3</span>
             </li>
 
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
+            <li class="skills-logo-item">
+              <div class="icon-box-logo">
+                <i class="fa-brands fa-bootstrap"></i>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
+              <span>Bootstrap</span>
+            </li>
+            
+            <li class="skills-logo-item">
+              <div class="icon-box-logo">
+                <ion-icon name="logo-github"></ion-icon>
               </div>
+              <span>Git / GitHub</span>
+            </li>
+            
+            <li class="skills-logo-item">
+              <div class="icon-box-logo">
+                <i class="fa-brands fa-php"></i>
+              </div>
+              <span>PHP</span>
+            </li>
 
+            <li class="skills-logo-item">
+              <div class="icon-box-logo">
+                 <ion-icon name="server-outline"></ion-icon>
+              </div>
+              <span>MySQL / PhpMyAdmin</span>
+            </li>
+            
+            <li class="skills-logo-item">
+              <div class="icon-box-logo">
+                <ion-icon name="logo-wordpress"></ion-icon>
+              </div>
+              <span>WordPress</span>
+            </li>
+
+            <li class="skills-logo-item">
+              <div class="icon-box-logo">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+              <span>Figma</span>
             </li>
 
           </ul>
@@ -747,15 +648,15 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>Développement Web</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn>Développement Logiciel</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn>Design & Conception</button>
             </li>
 
           </ul>
@@ -779,15 +680,15 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Développement Web</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item>Développement Logiciel</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>Design & Conception</button>
               </li>
 
             </ul>
@@ -796,7 +697,7 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="développement web">
               <a href="#">
 
                 <figure class="project-img">
@@ -804,17 +705,17 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/CaptureSiteWeb7.jpg" alt="finance" loading="lazy">
+                  <img src="./assets/images/CaptureSiteWeb7.jpg" alt="Site IA et Armement" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">IA et armement</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Développement Web</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="développement web">
               <a href="#">
 
                 <figure class="project-img">
@@ -822,17 +723,17 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/CaptureReservation.png" alt="Application de réservation" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Orizon</h3>
+                <h3 class="project-title">Gestion de réservations</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Développement Web</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="développement logiciel">
               <a href="#">
 
                 <figure class="project-img">
@@ -840,17 +741,17 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                  <img src="./assets/images/img-6.png" alt="Application Java FreedomMoney" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Fundo</h3>
+                <h3 class="project-title">FreedomMoney (Gestion bancaire)</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Développement Logiciel</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
+            <li class="project-item  active" data-filter-item data-category="développement logiciel">
               <a href="#">
 
                 <figure class="project-img">
@@ -858,17 +759,17 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                  <img src="./assets/images/project-8.jpg" alt="Application Java Gestion multi-services" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Brawlhalla</h3>
+                <h3 class="project-title">Gestion multi-services (Java)</h3>
 
-                <p class="project-category">Applications</p>
+                <p class="project-category">Développement Logiciel</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="design & conception">
               <a href="#">
 
                 <figure class="project-img">
@@ -876,17 +777,17 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                  <img src="./assets/images/CaptureFigma.png" alt="Maquettes Figma Futbolia" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">DSM.</h3>
+                <h3 class="project-title">Maquettes UX/UI (Figma)</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Design & Conception</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="développement web">
               <a href="#">
 
                 <figure class="project-img">
@@ -894,17 +795,17 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                  <img src="./assets/images/project-4.png" alt="Application GameHub" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">MetaSpark</h3>
+                <h3 class="project-title">GameHub (Collection de jeux)</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Développement Web</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="développement logiciel">
               <a href="#">
 
                 <figure class="project-img">
@@ -912,48 +813,12 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                  <img src="./assets/images/CaptureGENERATE.PNG" alt="Module Java XBORDER" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Summary</h3>
+                <h3 class="project-title">XBORDER (Conversion MT103)</h3>
 
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
+                <p class="project-category">Développement Logiciel</p>
 
               </a>
             </li>
@@ -975,7 +840,7 @@
       <article class="blog" data-page="blog">
 
         <header>
-          <h2 class="h2 article-title">Blog</h2>
+          <h2 class="h2 article-title">Veille</h2>
         </header>
 
         <section class="blog-posts">
@@ -1210,56 +1075,55 @@
         </button>
 
         <header>
-          <h2 class="h2 article-title" id="project-detail-title">Projet Ecole</h2>
+          <h2 class="h2 article-title" id="project-detail-title">Titre du Projet</h2>
         </header>
 
         <section class="project-detail-header">
-
           <div class="project-detail-banner">
             <img src="./assets/images/project-1.jpg" alt="Logo Mastering" id="project-detail-banner">
           </div>
-
           <div class="project-detail-meta">
             <div class="project-meta-item">
               <p class="contact-title">Category</p>
-              <h4 class="h4" id="project-detail-category">Projet Ecole</h4>
+              <h4 class="h4" id="project-detail-category">Catégorie</h4>
             </div>
-
             <div class="project-meta-item">
               <p class="contact-title">Client</p>
-              <h4 class="h4" id="project-detail-client">Ecole Esic</h4>
+              <h4 class="h4" id="project-detail-client">Client</h4>
             </div>
-
             <div class="project-meta-item">
-              <p class="contact-title">Start Date</p>
-              <h4 class="h4" id="project-detail-date">May 10, 2025</h4>
+              <p class="contact-title">Date</p>
+              <h4 class="h4" id="project-detail-date">Date</h4>
             </div>
-
             <div class="project-meta-item">
-              <p class="contact-title">Designer</p>
-              <h4 class="h4" id="project-detail-designer">FENZI Melissa</h4>
+              <p class="contact-title">Type</p>
+              <h4 class="h4" id="project-detail-type">Type</h4>
             </div>
           </div>
-
         </section>
 
         <section class="project-description">
-          <h3 class="h3" id="project-detail-desc-title">Description du Projet : Mastering</h3>
-          <p class="about-text" id="project-detail-desc-text">
-            Mastering est une application (WEB/MOBILE) innovante...
+          <h3 class="h3">Objectif du projet</h3>
+          <p class="about-text" id="project-detail-objectif">
           </p>
         </section>
 
         <section class="project-features">
-          <h3 class="h3">Tâches de réalisation</h3>
-          <div id="project-detail-features">
-            <div class="feature-item">
-              <h4 class="h4 feature-title">1. Gestion des Connexions...</h4>
-              <p class="about-text">
-                Ce processus couvre l'authentification...
-              </p>
-            </div>
-          </div>
+          <h3 class="h3">Description du projet</h3>
+          <p class="about-text" id="project-detail-description">
+          </p>
+        </section>
+
+        <section class="project-features">
+          <h3 class="h3">Outils et technologies utilisés</h3>
+          <ul class="deliverable-list" id="project-detail-outils">
+          </ul>
+        </section>
+
+        <section class="project-features">
+          <h3 class="h3">Compétences mobilisées</h3>
+          <ul class="deliverable-list" id="project-detail-competences">
+          </ul>
         </section>
 
         <section class="project-gallery">
