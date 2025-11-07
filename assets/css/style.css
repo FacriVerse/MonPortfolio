@@ -2050,3 +2050,123 @@ textarea.form-input::-webkit-resizer { display: none; }
     grid-template-columns: 1fr 1fr; /* 2 liens par ligne */
   }
 }
+/*-----------------------------------*\
+  #PROJET DETAIL - AJOUTS
+\*-----------------------------------*/
+
+/* Bouton Retour */
+.back-to-portfolio-btn {
+  position: absolute;
+  top: 15px; /* Aligne avec le padding de l'article */
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--orange-yellow-crayola); /* Couleur accent */
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  transition: var(--transition-1);
+  z-index: 30; /* Force le bouton au-dessus des éléments potentiellement superposés */
+  pointer-events: auto; /* S'assure qu'il reçoit les clics */
+}
+
+.back-to-portfolio-btn:hover {
+  filter: brightness(0.8);
+}
+
+.back-to-portfolio-btn ion-icon {
+  font-size: 18px;
+  --ionicon-stroke-width: 50px;
+}
+
+/* Ajustement pour que le titre ne touche pas le bouton */
+.about[data-page="projet-detail"] .article-title {
+  padding-top: 30px;
+}
+
+/* Assure que le bouton 'Retour' position:absolute est relatif à cet article */
+.about[data-page="projet-detail"] {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 580px) {
+  .back-to-portfolio-btn {
+    top: 30px;
+    left: 30px;
+  }
+}
+
+/* Images de la galerie cliquables */
+.gallery-grid img {
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.gallery-grid img:hover {
+  /* Effet de zoom léger au survol */
+  transform: scale(1.05);
+  border-color: var(--orange-yellow-crayola);
+}
+
+
+/*-----------------------------------*\
+  #GALERIE LIGHTBOX (MODALE IMAGE)
+\*-----------------------------------*/
+
+/* On réutilise les styles de la modale de témoignage */
+.modal-container.gallery-modal {
+  /* (styles de base déjà dans .modal-container) */
+  z-index: 21; /* Au-dessus de l'autre modale si jamais */
+}
+
+.overlay.gallery {
+  /* (styles de base déjà dans .overlay) */
+  background: hsla(0, 0%, 5%, 0.9); /* Fond plus sombre */
+}
+
+.testimonials-modal.gallery-modal {
+  /* On enlève le padding et les bordures */
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  /* Taille de l'image */
+  max-width: 90%;
+  max-height: 90vh;
+  /* S'assure que l'image ne dépasse pas */
+  overflow: hidden;
+}
+
+.testimonials-modal.gallery-modal .modal-img-wrapper {
+  /* Contient l'image */
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials-modal.gallery-modal img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Garde les proportions de l'image */
+  border-radius: 14px; /* Garde la cohérence */
+}
+
+.modal-close-btn.gallery-modal {
+  /* Positionne le bouton de fermeture */
+  top: -10px;
+  right: -10px;
+  transform: translate(100%, 0);
+  background: var(--onyx);
+  color: var(--white-2);
+  font-size: 20px;
+}
+
+@media (min-width: 580px) {
+  .modal-close-btn.gallery-modal {
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
