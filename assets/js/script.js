@@ -159,7 +159,7 @@ const projectData = {
   
   "IA et armement": {
     pageTitle: "Projet: IA et armement",
-    banner: "./assets/images/CaptureSiteWeb7.jpg",
+    banner: "./assets/images/projet_IA_ARMEMENT.png",
     category: "Développement Web",
     client: "Projet de groupe (TP)",
     date: "2024-2025",
@@ -177,9 +177,9 @@ const projectData = {
       <li class="deliverable-item"><span>Recherche documentaire sur les enjeux technologiques et éthiques de l’IA</span></li>
       <li class="deliverable-item"><span>Structuration et cohérence d’un site web multi-pages</span></li>`,
     gallery: [
-      { src: "./assets/images/CaptureSiteWeb7.jpg", alt: "Accueil" },
-      { src: "./assets/images/CaptureSiteWeb.png", alt: "Types d'utilisation" },
-      { src: "./assets/images/CaptureSiteWeb2.png", alt: "Accueil détail" }
+      { src: "./assets/images/Gallery_IA_ARMEMENT1.png", alt: "Image Site 1" },
+      { src: "./assets/images/Gallery_IA_ARMEMENT2.png", alt: "Image Site 2" },
+      { src: "./assets/images/Gallery_IA_ARMEMENT3.png", alt: "Image Site 3" }
     ],
     deliverables: `
       <a href="#" class="deliverable-item">
@@ -190,7 +190,7 @@ const projectData = {
 
   "Gestion de réservations": {
     pageTitle: "Projet: Gestion de réservations",
-    banner: "./assets/images/CaptureReservation.png",
+    banner: "./assets/images/projet_Reservation_Materiel.png",
     category: "Développement Web",
     client: "Projet d'équipe (TP)",
     date: "2024-2025",
@@ -210,9 +210,12 @@ const projectData = {
       <li class="deliverable-item"><span>Implémentation de logique métier (authentification, CRUD)</span></li>
       <li class="deliverable-item"><span>Travail en équipe et gestion de projet</span></li>`,
     gallery: [
-      { src: "./assets/images/CaptureReservation.png", alt: "Page de Réservation" },
-      { src: "./assets/images/CaptureListe.png", alt: "Page de Consultation" },
-      { src: "./assets/images/CaptureBD1.png", alt: "Base de données" }
+      { src: "./assets/images/Gallery_GestionMateriel1.png", alt: "Page d'accueil" },
+      { src: "./assets/images/Gallery_GestionMateriel2.png", alt: "Page de Contact" },
+      { src: "./assets/images/Gallery_GestionMateriel3.png", alt: "Page de Réservation" },
+       { src: "./assets/images/Gallery_GestionMateriel4.png", alt: "Page de Connexion" },
+        { src: "./assets/images/Gallery_GestionMateriel6.png", alt: "Base de données" }
+
     ],
     deliverables: `
       <a href="#" class="deliverable-item">
@@ -223,7 +226,7 @@ const projectData = {
   
   "FreedomMoney (Gestion bancaire)": {
     pageTitle: "Projet: FreedomMoney",
-    banner: "./assets/images/img-6.png", // Image du code Java
+    banner: "./assets/images/projet_FreedomMoney.png", // Image du code Java
     category: "Développement Logiciel",
     client: "Projet Individuel (TP)",
     date: "2024-2025",
@@ -241,7 +244,9 @@ const projectData = {
       <li class="deliverable-item"><span>Conception algorithmique (rédaction de pseudo-code)</span></li>
       <li class="deliverable-item"><span>Autonomie, résolution de problèmes</span></li>`,
     gallery: [
-      { src: "./assets/images/img-6.png", alt: "Capture du code Java Swing" }
+      { src: "./assets/images/Gallery_FreedomMoney1.png", alt: "Capture du code Java Swing1" },
+      { src: "./assets/images/Gallery_FreedomMoney2.png", alt: "Capture du code Java Swing2" },
+      { src: "./assets/images/Gallery_FreedomMoney3.png", alt: "Capture du code Java Swing3" }
     ],
     deliverables: `
       <a href="#" class="deliverable-item">
@@ -252,7 +257,7 @@ const projectData = {
 
   "Gestion multi-services (Java)": {
     pageTitle: "Projet: Gestion multi-services",
-    banner: "./assets/images/project-8.jpg", // Image placeholder
+    banner: "./assets/images/projet_Gestion _Multi_Services.png", // Image placeholder
     category: "Développement Logiciel",
     client: "Projet Individuel (TP)",
     date: "2024-2025",
@@ -269,7 +274,9 @@ const projectData = {
       <li class="deliverable-item"><span>Conception de logique métier multi-modules</span></li>
       <li class="deliverable-item"><span>Gestion des permissions et des rôles utilisateurs</span></li>`,
     gallery: [
-      { src: "./assets/images/project-8.jpg", alt: "Aperçu App" }
+      { src: "./assets/images/Gallery_MultiService1.png", alt: "Capture code java" },
+      { src: "./assets/images/Gallery_MultiService2.png", alt: "Capture code java 2" },
+      { src: "./assets/images/Gallery_MultiService3.png", alt: "Capture code java 3" }
     ],
     deliverables: `
       <a href="#" class="deliverable-item">
@@ -280,7 +287,7 @@ const projectData = {
 
   "Maquettes UX/UI (Figma)": {
     pageTitle: "Projet: Maquettes UX/UI",
-    banner: "./assets/images/CaptureFigma.png",
+    banner: "./assets/images/projet_Maquettes.png",
     category: "Design & Conception",
     client: "Projet Individuel (TP)",
     date: "2024-2025",
@@ -296,7 +303,8 @@ const projectData = {
       <li class="deliverable-item"><span>Conception de composants (boutons, formulaires, menus)</span></li>
       <li class="deliverable-item"><span>Autonomie et gestion de projet de design</span></li>`,
     gallery: [
-      { src: "./assets/images/CaptureFigma.png", alt: "Maquette Futbolia" }
+      { src: "./assets/images/CaptureFigma.png", alt: "Maquette Futbolia" },
+      { src: "./assets/images/CaptureFigma2.png", alt: "Maquette L'entrecôte Royale" }
     ],
     deliverables: `
       <a href="#" class="deliverable-item">
@@ -307,7 +315,7 @@ const projectData = {
 
   "GameHub (Collection de jeux)": {
     pageTitle: "Projet: GameHub",
-    banner: "./assets/images/project-4.png", // Image placeholder
+    banner: "./assets/images/projet_GameHub.png", // Image placeholder
     category: "Développement Web",
     client: "Projet Individuel (TP)",
     date: "2025-2026",
@@ -327,7 +335,8 @@ const projectData = {
       <li class="deliverable-item"><span>Mise en œuvre d'une architecture MVC</span></li>
       <li class="deliverable-item"><span>Gestion de l'authentification (Sessions, password_hash)</span></li>`,
     gallery: [
-      { src: "./assets/images/project-4.png", alt: "Aperçu GameHub" }
+      { src: "./assets/images/Gallery_Gamehub1.png", alt: "Aperçu GameHub" },
+      { src: "./assets/images/Gallery_Gamehub2.png", alt: "Aperçu GameHub 2" }
     ],
     deliverables: `
       <a href="#" class="deliverable-item">
@@ -338,7 +347,7 @@ const projectData = {
 
   "XBORDER (Conversion MT103)": {
     pageTitle: "Projet: XBORDER (Stage)",
-    banner: "./assets/images/CaptureGENERATE.PNG",
+    banner: "./assets/images/projet_Xborder.png", // Image placeholder
     category: "Développement Logiciel",
     client: "CACIB (Stage)",
     date: "2024-2025",

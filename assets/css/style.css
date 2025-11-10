@@ -1230,12 +1230,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #PORTFOLIO, BLOG 
-   */
-
-  .project-img,
-  .blog-banner-box { height: auto; }
+  
 
 }
 
@@ -2344,4 +2339,25 @@ textarea.form-input::-webkit-resizer { display: none; }
    (le filtre du portfolio ne s'applique pas ici) */
 .certifications .project-item {
   display: block;
+}
+/*-----------------------------------*\
+  # CORRECTION HOMOGÉNÉITÉ IMAGES PROJET
+\*-----------------------------------*/
+
+/* Force une hauteur fixe pour la bannière principale */
+.project-detail-banner {
+  height: 250px; /* Hauteur fixe pour la bannière */
+  max-width: 100%; /* Annule l'ancienne règle de 300px */
+  background: var(--eerie-black-1); /* Ajoute un fond au cas où l'image est transparente */
+}
+
+/* S'assure que l'image de la bannière couvre la zone */
+.project-detail-banner img {
+  object-fit: cover; 
+}
+
+/* Force une hauteur fixe pour les images de la galerie */
+.gallery-grid img {
+  height: 180px; /* Hauteur fixe pour chaque vignette */
+  object-fit: cover; /* S'assure qu'elle remplit la boîte sans se déformer */
 }
