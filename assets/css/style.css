@@ -2361,3 +2361,213 @@ textarea.form-input::-webkit-resizer { display: none; }
   height: 180px; /* Hauteur fixe pour chaque vignette */
   object-fit: cover; /* S'assure qu'elle remplit la boîte sans se déformer */
 }
+/*-----------------------------------*\
+  #VEILLE TECHNOLOGIQUE
+\*-----------------------------------*/
+
+.veille-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tag-item {
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid var(--jet);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  cursor: default;
+}
+
+.tag-item:hover {
+  border-color: var(--orange-yellow-crayola);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-3);
+}
+/*-----------------------------------*\
+  #VEILLE - SECTION VIDEO
+\*-----------------------------------*/
+
+/* Le conteneur qui sépare le texte des vidéos */
+.service-flex-wrapper {
+  display: flex;
+  flex-direction: column; /* Sur mobile : l'un en dessous de l'autre */
+  gap: 25px;
+  width: 100%;
+}
+
+/* Sur écran plus large (tablette/PC) : on met côte à côte */
+@media (min-width: 768px) {
+  .service-flex-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  /* Le texte prend un peu plus de place */
+  .service-content-box {
+      flex: 3;
+  }
+  /* La colonne vidéo prend moins de place */
+  .video-sidebar {
+      flex: 2;
+      min-width: 200px; /* Largeur minimale pour que les vidéos soient visibles */
+  }
+}
+
+/* Style des miniatures vidéo */
+.video-thumbnail {
+    display: block;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--jet);
+    transition: var(--transition-1);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition-1);
+    opacity: 0.8;
+}
+
+/* Icône "Play" par dessus l'image */
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: var(--orange-yellow-crayola);
+    opacity: 0.9;
+    transition: var(--transition-1);
+}
+
+/* Effet au survol de la vidéo */
+.video-thumbnail:hover {
+    border-color: var(--orange-yellow-crayola);
+    transform: scale(1.02);
+}
+
+.video-thumbnail:hover img {
+    opacity: 0.4; /* On assombrit l'image pour faire ressortir le bouton play */
+}
+
+.video-thumbnail:hover .play-icon {
+    transform: translate(-50%, -50%) scale(1.2); /* Le bouton play grossit un peu */
+}
+/* --- STYLE MINIATURES VIDEO --- */
+
+.video-preview-card {
+  position: relative;
+  display: block;
+  margin-bottom: 15px; /* Espace entre les vidéos */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--jet);
+  background: var(--eerie-black-1);
+  transition: 0.3s ease;
+}
+
+/* On retire la marge sur la dernière vidéo pour l'alignement */
+.video-preview-card:last-child {
+  margin-bottom: 0;
+}
+
+.video-preview-card img {
+  width: 100%;
+  height: 140px; /* Hauteur fixe pour que ce soit propre */
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: block;
+}
+
+/* Le bouton Play Rouge */
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: #ff0000;
+  background: rgba(0,0,0,0.7); /* Fond noir semi-transparent */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.video-label {
+  display: block;
+  padding: 8px 15px;
+  font-size: 11px;
+  color: var(--white-2);
+  background: var(--onyx); /* Bandeau titre en bas de la vidéo */
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Animation au survol */
+.video-preview-card:hover {
+  border-color: var(--orange-yellow-crayola);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2);
+}
+
+.video-preview-card:hover img {
+  opacity: 1; /* L'image s'éclaire */
+}
+
+.video-preview-card:hover .play-overlay {
+  background: rgba(255, 0, 0, 0.9); /* Le bouton devient plus rouge */
+  color: white;
+}
+/* --- CORRECTIF ERGONOMIE TITRE / NAVBAR --- */
+
+/* Uniquement sur ordinateur (là où la navbar est en haut à droite) */
+@media (min-width: 1024px) {
+  
+  .blog .article-title {
+    /* 1. On réduit légèrement la taille pour que ça reste élégant */
+    font-size: 26px; 
+    
+    /* 2. On limite la largeur du titre à 65% de la page
+       Cela l'empêche physiquement d'aller toucher la navbar à droite */
+    max-width: 65%;
+    
+    /* 3. (Optionnel) Si le titre passe sur 2 lignes, on ajuste l'interligne */
+    line-height: 1.3;
+  }
+  
+}
+/* --- AJUSTEMENT TAILLE NOM SIDEBAR --- */
+
+.info-content .name {
+  /* On réduit la taille (par défaut c'était var(--fs-3) qui est assez gros) */
+  font-size: 20px !important; 
+  
+  /* On permet au nom de passer à la ligne si vraiment nécessaire */
+  white-space: normal !important; 
+  text-align: center;
+  
+  /* Un peu plus d'espace entre les lignes si ça passe sur 2 lignes */
+  line-height: 1.4;
+}
+
+/* Ajustement spécifique pour les grands écrans (Ordinateurs) */
+@media (min-width: 1250px) {
+  .info-content .name {
+    font-size: 22px !important; /* Un tout petit peu plus grand sur PC, mais pas trop */
+  }
+}
