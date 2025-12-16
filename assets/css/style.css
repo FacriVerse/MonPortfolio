@@ -1230,12 +1230,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #PORTFOLIO, BLOG 
-   */
-
-  .project-img,
-  .blog-banner-box { height: auto; }
+  
 
 }
 
@@ -1866,4 +1861,713 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+/*-----------------------------------*\
+  #PROJET DETAIL
+\*-----------------------------------*/
+
+/* Section d'en-tête (Image + Métadonnées)
+*/
+.project-detail-header {
+  display: grid;
+  grid-template-columns: 1fr; /* Une colonne sur mobile */
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.project-detail-banner {
+  width: 100%;
+  max-width: 300px; /* Limite la taille du logo */
+  border-radius: 16px; /* Cohérent avec .project-img */
+  overflow: hidden;
+  border: 1px solid var(--jet);
+}
+
+.project-detail-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--white-1); /* Fond blanc pour les logos comme MASTERING */
+}
+
+.project-detail-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes pour les métadonnées */
+  gap: 20px 30px;
+}
+
+.project-meta-item .contact-title {
+  /* Réutilise le style de la sidebar */
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.project-meta-item .h4 {
+  /* Réutilise le style H4 */
+  color: var(--white-2);
+}
+
+
+/* Sections de contenu (Description, Fonctionnalités...)
+*/
+.project-description,
+.project-features,
+.project-gallery,
+.project-deliverables {
+  margin-top: 40px;
+}
+
+/* Titres de section H3 */
+.project-description .h3,
+.project-features .h3,
+.project-gallery .h3,
+.project-deliverables .h3 {
+  margin-bottom: 25px;
+  position: relative;
+  /* Recrée la ligne de sous-titre de l'inspiration (violet)
+     mais avec votre charte (jaune/or).
+  */
+  border-bottom: 1px solid var(--jet);
+  padding-bottom: 15px;
+}
+
+.project-description .h3::after,
+.project-features .h3::after,
+.project-gallery .h3::after,
+.project-deliverables .h3::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; /* S'aligne avec la bordure */
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--text-gradient-yellow); /* Votre gradient accent */
+  border-radius: 3px;
+}
+
+
+/* Liste des fonctionnalités (Inspiration ...143642.png)
+*/
+.feature-item {
+  margin-bottom: 25px;
+}
+
+.feature-item .feature-title {
+  color: var(--white-2);
+  margin-bottom: 10px;
+  font-size: var(--fs-3); /* Un peu plus grand */
+}
+
+.feature-item .about-text {
+  /* Réutilise le style de paragraphe */
+  margin-left: 20px;
+  border-left: 2px solid var(--jet);
+  padding-left: 15px;
+}
+
+
+/* Galerie d'images
+*/
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px; /* Cohérent avec les petites cartes */
+  border: 1px solid var(--jet);
+  object-fit: cover;
+}
+
+
+/* Livrables (Inspiration ...143729.png)
+*/
+.deliverable-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.deliverable-item {
+  background: var(--eerie-black-1); /* Fond intérieur des cartes */
+  border: 1px solid var(--jet);
+  padding: 15px 20px;
+  border-radius: 14px; /* Cohérent avec .form-input */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  transition: var(--transition-1);
+}
+
+.deliverable-item ion-icon {
+  font-size: 20px;
+  color: var(--orange-yellow-crayola); /* Icone en couleur accent */
+  flex-shrink: 0; /* Empêche l'icône de rétrécir */
+}
+
+.deliverable-item span {
+  /* Gère les textes trop longs */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.deliverable-item:hover {
+  border-color: var(--orange-yellow-crayola);
+  color: var(--white-2);
+}
+
+
+/*-----------------------------------*\
+  #RESPONSIVE (pour le détail projet)
+\*-----------------------------------*/
+
+@media (min-width: 580px) {
+  .project-detail-header {
+    grid-template-columns: 3fr 2fr;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 images par ligne */
+  }
+  
+  .deliverable-list {
+    grid-template-columns: 1fr 1fr; /* 2 liens par ligne */
+  }
+}
+/*-----------------------------------*\
+  #PROJET DETAIL - AJOUTS
+\*-----------------------------------*/
+
+/* Bouton Retour */
+.back-to-portfolio-btn {
+  position: absolute;
+  top: 15px; /* Aligne avec le padding de l'article */
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--orange-yellow-crayola); /* Couleur accent */
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  transition: var(--transition-1);
+  z-index: 30; /* Force le bouton au-dessus des éléments potentiellement superposés */
+  pointer-events: auto; /* S'assure qu'il reçoit les clics */
+}
+
+.back-to-portfolio-btn:hover {
+  filter: brightness(0.8);
+}
+
+.back-to-portfolio-btn ion-icon {
+  font-size: 18px;
+  --ionicon-stroke-width: 50px;
+}
+
+/* Ajustement pour que le titre ne touche pas le bouton */
+.about[data-page="projet-detail"] .article-title {
+  padding-top: 30px;
+}
+
+/* Assure que le bouton 'Retour' position:absolute est relatif à cet article */
+.about[data-page="projet-detail"] {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 580px) {
+  .back-to-portfolio-btn {
+    top: 30px;
+    left: 30px;
+  }
+}
+
+/* Images de la galerie cliquables */
+.gallery-grid img {
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.gallery-grid img:hover {
+  /* Effet de zoom léger au survol */
+  transform: scale(1.05);
+  border-color: var(--orange-yellow-crayola);
+}
+
+
+/*-----------------------------------*\
+  #GALERIE LIGHTBOX (MODALE IMAGE)
+\*-----------------------------------*/
+
+/* On réutilise les styles de la modale de témoignage */
+.modal-container.gallery-modal {
+  /* (styles de base déjà dans .modal-container) */
+  z-index: 21; /* Au-dessus de l'autre modale si jamais */
+}
+
+.overlay.gallery {
+  /* (styles de base déjà dans .overlay) */
+  background: hsla(0, 0%, 5%, 0.9); /* Fond plus sombre */
+}
+
+.testimonials-modal.gallery-modal {
+  /* On enlève le padding et les bordures */
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  /* Taille de l'image */
+  max-width: 90%;
+  max-height: 90vh;
+  /* S'assure que l'image ne dépasse pas */
+  overflow: hidden;
+}
+
+.testimonials-modal.gallery-modal .modal-img-wrapper {
+  /* Contient l'image */
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials-modal.gallery-modal img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Garde les proportions de l'image */
+  border-radius: 14px; /* Garde la cohérence */
+}
+
+.modal-close-btn.gallery-modal {
+  /* Positionne le bouton de fermeture */
+  top: -10px;
+  right: -10px;
+  transform: translate(100%, 0);
+  background: var(--onyx);
+  color: var(--white-2);
+  font-size: 20px;
+}
+
+@media (min-width: 580px) {
+  .modal-close-btn.gallery-modal {
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+/*-----------------------------------*\
+  # CORRECTION PROJET DETAIL
+\*-----------------------------------*/
+
+/* Force la liste des compétences
+   à rester sur 1 colonne, même sur grand écran. */
+@media (min-width: 768px) {
+  #project-detail-competences {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*-----------------------------------*\
+  # STYLE AJOUTÉ BTS SIO
+\*-----------------------------------*/
+
+/* Style pour le texte d'introduction du BTS SIO */
+.bts-intro-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 30px; /* Espace avant les cartes */
+}
+
+.bts-intro-text p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/* Style pour le sous-titre "Débouchés possibles" */
+.service-item-subtitle {
+  color: var(--orange-yellow-crayola); /* Couleur accent */
+  font-weight: var(--fw-500);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left; /* Assure l'alignement à gauche */
+}
+
+/* Style pour la liste des débouchés */
+.service-item-list {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  text-align: left; /* Assure l'alignement à gauche */
+  padding-left: 20px; /* Indentation */
+}
+
+.service-item-list li {
+  list-style-type: '› '; /* Puce personnalisée */
+  padding-left: 10px; /* Espace après la puce */
+  margin-bottom: 5px;
+}
+
+/* Force l'alignement à gauche du texte dans les cartes */
+.service-item .service-content-box {
+  text-align: left;
+}
+
+
+/*-----------------------------------*\
+  # STYLE UNIFIÉ LOGOS (SKILLS & SIO)
+\*-----------------------------------*/
+
+/* Retire le padding de la carte de base pour les skills */
+.skills-logo-list {
+  padding: 20px;
+  display: grid;
+  /* 3 colonnes sur mobile, 4 sur tablette, etc. */
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 20px;
+}
+
+/* Style de la carte individuelle (Skills) */
+.skills-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre l'icône et le texte */
+  gap: 10px; /* Espace entre l'icône et le texte */
+  
+  /* Style de la carte individuelle */
+  background: var(--onyx); /* Fond sombre */
+  border: 1px solid var(--jet);
+  padding: 20px 10px;
+  border-radius: 14px;
+  transition: var(--transition-1);
+}
+
+/* Effet au survol (Skills) */
+.skills-logo-item:hover {
+  border-color: var(--orange-yellow-crayola);
+  transform: translateY(-3px);
+}
+
+/* Style du texte sous l'icône (Skills) */
+.skills-logo-item span {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8); /* 11px ou 12px */
+  font-weight: var(--fw-300);
+  text-align: center;
+}
+
+
+/* Style de la boîte d'icône (POUR SKILLS ET SIO) */
+.skills-logo-item .icon-box-logo,
+.service-item .icon-box-logo {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange-yellow-crayola);
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+  flex-shrink: 0; /* Empêche de rétrécir */
+}
+
+/* Fond intérieur */
+.skills-logo-item .icon-box-logo::before,
+.service-item .icon-box-logo::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--eerie-black-1);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Style des icônes (Ionicons) */
+.skills-logo-item .icon-box-logo ion-icon,
+.service-item .icon-box-logo ion-icon {
+  font-size: 30px;
+  --ionicon-stroke-width: 30px;
+}
+
+/* Style des icônes (Font Awesome) */
+.skills-logo-item .icon-box-logo .fa-brands,
+.service-item .icon-box-logo .fa-brands {
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* Centrage de la boîte SIO sur mobile */
+.service-item .icon-box-logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+/* Alignement sur écrans larges */
+@media (min-width: 580px) {
+  .service-item .icon-box-logo {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+}
+/*-----------------------------------*\
+  # STYLE SECTION CERTIFICATION
+\*-----------------------------------*/
+
+.certifications {
+  /* Ajoute de l'espace au-dessus de la section */
+  margin-top: 40px; 
+}
+
+/* Force les cartes de certification à être actives
+   (le filtre du portfolio ne s'applique pas ici) */
+.certifications .project-item {
+  display: block;
+}
+/*-----------------------------------*\
+  # CORRECTION HOMOGÉNÉITÉ IMAGES PROJET
+\*-----------------------------------*/
+
+/* Force une hauteur fixe pour la bannière principale */
+.project-detail-banner {
+  height: 250px; /* Hauteur fixe pour la bannière */
+  max-width: 100%; /* Annule l'ancienne règle de 300px */
+  background: var(--eerie-black-1); /* Ajoute un fond au cas où l'image est transparente */
+}
+
+/* S'assure que l'image de la bannière couvre la zone */
+.project-detail-banner img {
+  object-fit: cover; 
+}
+
+/* Force une hauteur fixe pour les images de la galerie */
+.gallery-grid img {
+  height: 180px; /* Hauteur fixe pour chaque vignette */
+  object-fit: cover; /* S'assure qu'elle remplit la boîte sans se déformer */
+}
+/*-----------------------------------*\
+  #VEILLE TECHNOLOGIQUE
+\*-----------------------------------*/
+
+.veille-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tag-item {
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid var(--jet);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  cursor: default;
+}
+
+.tag-item:hover {
+  border-color: var(--orange-yellow-crayola);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-3);
+}
+/*-----------------------------------*\
+  #VEILLE - SECTION VIDEO
+\*-----------------------------------*/
+
+/* Le conteneur qui sépare le texte des vidéos */
+.service-flex-wrapper {
+  display: flex;
+  flex-direction: column; /* Sur mobile : l'un en dessous de l'autre */
+  gap: 25px;
+  width: 100%;
+}
+
+/* Sur écran plus large (tablette/PC) : on met côte à côte */
+@media (min-width: 768px) {
+  .service-flex-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  /* Le texte prend un peu plus de place */
+  .service-content-box {
+      flex: 3;
+  }
+  /* La colonne vidéo prend moins de place */
+  .video-sidebar {
+      flex: 2;
+      min-width: 200px; /* Largeur minimale pour que les vidéos soient visibles */
+  }
+}
+
+/* Style des miniatures vidéo */
+.video-thumbnail {
+    display: block;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--jet);
+    transition: var(--transition-1);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition-1);
+    opacity: 0.8;
+}
+
+/* Icône "Play" par dessus l'image */
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: var(--orange-yellow-crayola);
+    opacity: 0.9;
+    transition: var(--transition-1);
+}
+
+/* Effet au survol de la vidéo */
+.video-thumbnail:hover {
+    border-color: var(--orange-yellow-crayola);
+    transform: scale(1.02);
+}
+
+.video-thumbnail:hover img {
+    opacity: 0.4; /* On assombrit l'image pour faire ressortir le bouton play */
+}
+
+.video-thumbnail:hover .play-icon {
+    transform: translate(-50%, -50%) scale(1.2); /* Le bouton play grossit un peu */
+}
+/* --- STYLE MINIATURES VIDEO --- */
+
+.video-preview-card {
+  position: relative;
+  display: block;
+  margin-bottom: 15px; /* Espace entre les vidéos */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--jet);
+  background: var(--eerie-black-1);
+  transition: 0.3s ease;
+}
+
+/* On retire la marge sur la dernière vidéo pour l'alignement */
+.video-preview-card:last-child {
+  margin-bottom: 0;
+}
+
+.video-preview-card img {
+  width: 100%;
+  height: 140px; /* Hauteur fixe pour que ce soit propre */
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: block;
+}
+
+/* Le bouton Play Rouge */
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: #ff0000;
+  background: rgba(0,0,0,0.7); /* Fond noir semi-transparent */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.video-label {
+  display: block;
+  padding: 8px 15px;
+  font-size: 11px;
+  color: var(--white-2);
+  background: var(--onyx); /* Bandeau titre en bas de la vidéo */
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Animation au survol */
+.video-preview-card:hover {
+  border-color: var(--orange-yellow-crayola);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2);
+}
+
+.video-preview-card:hover img {
+  opacity: 1; /* L'image s'éclaire */
+}
+
+.video-preview-card:hover .play-overlay {
+  background: rgba(255, 0, 0, 0.9); /* Le bouton devient plus rouge */
+  color: white;
+}
+/* --- CORRECTIF ERGONOMIE TITRE / NAVBAR --- */
+
+/* Uniquement sur ordinateur (là où la navbar est en haut à droite) */
+@media (min-width: 1024px) {
+  
+  .blog .article-title {
+    /* 1. On réduit légèrement la taille pour que ça reste élégant */
+    font-size: 26px; 
+    
+    /* 2. On limite la largeur du titre à 65% de la page
+       Cela l'empêche physiquement d'aller toucher la navbar à droite */
+    max-width: 65%;
+    
+    /* 3. (Optionnel) Si le titre passe sur 2 lignes, on ajuste l'interligne */
+    line-height: 1.3;
+  }
+  
+}
+/* --- AJUSTEMENT TAILLE NOM SIDEBAR --- */
+
+.info-content .name {
+  /* On réduit la taille (par défaut c'était var(--fs-3) qui est assez gros) */
+  font-size: 20px !important; 
+  
+  /* On permet au nom de passer à la ligne si vraiment nécessaire */
+  white-space: normal !important; 
+  text-align: center;
+  
+  /* Un peu plus d'espace entre les lignes si ça passe sur 2 lignes */
+  line-height: 1.4;
+}
+
+/* Ajustement spécifique pour les grands écrans (Ordinateurs) */
+@media (min-width: 1250px) {
+  .info-content .name {
+    font-size: 22px !important; /* Un tout petit peu plus grand sur PC, mais pas trop */
+  }
 }
