@@ -345,6 +345,55 @@ const projectData = {
       </a>`
   },
 
+  "CoreFlow — Module de Gestion Documentaire": {
+    pageTitle: "Projet: CoreFlow — Module de Gestion Documentaire",
+    banner: "./assets/images/projet_CoreFlow.png",
+    category: "Développement WEB",
+    client: "Projet scolaire — ESIC Malkoff",
+    date: "Décembre 2025 – Avril 2026",
+    type: "Projet d'équipe — BTS SIO SLAM (E6)",
+    objectif: "Concevoir et développer le module de gestion documentaire sécurisé de CoreFlow, une plateforme intranet d'entreprise visant à centraliser la gestion interne des ressources humaines, des congés, des tickets et de la communication organisationnelle. L'objectif de ce module était de permettre aux collaborateurs autorisés d'uploader, de stocker, de consulter et de supprimer des fichiers internes (PDF, images) de manière sécurisée, en conditionnant chaque action au rôle de l'utilisateur connecté.",
+    description: "CoreFlow est une plateforme intranet d'entreprise développée en équipe pour centraliser la gestion des congés, tickets, événements et documents internes. J'ai assuré le rôle de développeur full-stack sur le module de gestion documentaire, en binôme, en charge de l'intégralité du pipeline d'ajout et de suppression de fichiers. J'ai maquetté les interfaces sur Figma, développé le formulaire d'upload en Vue.js, construit les routes API REST avec Node.js/Express et intégré Multer pour le stockage physique sécurisé. Le défi principal était la synchronisation BDD/fichiers et la gestion des droits par rôle (Admin/RH), validées par des tests Postman et Jest.",
+    outils: `
+      <li class="deliverable-item"><span>Node.js / Express.js</span></li>
+      <li class="deliverable-item"><span>Vue.js 3</span></li>
+      <li class="deliverable-item"><span>Tailwind CSS</span></li>
+      <li class="deliverable-item"><span>MySQL / phpMyAdmin</span></li>
+      <li class="deliverable-item"><span>Multer</span></li>
+      <li class="deliverable-item"><span>Figma</span></li>
+      <li class="deliverable-item"><span>Postman</span></li>
+      <li class="deliverable-item"><span>Jest</span></li>
+      <li class="deliverable-item"><span>Git / GitHub</span></li>
+      <li class="deliverable-item"><span>Draw.io / PlantUML</span></li>`,
+    competences: `
+      <li class="deliverable-item"><span>Conception et modélisation de base de données relationnelle</span></li>
+      <li class="deliverable-item"><span>Développement d'une API REST sécurisée</span></li>
+      <li class="deliverable-item"><span>Gestion d'uploads de fichiers binaires</span></li>
+      <li class="deliverable-item"><span>Développement front-end réactif</span></li>
+      <li class="deliverable-item"><span>Contrôle d'accès basé sur les rôles (RBAC)</span></li>
+      <li class="deliverable-item"><span>Architecture logicielle MVC</span></li>
+      <li class="deliverable-item"><span>Tests d'intégration et unitaires automatisés</span></li>
+      <li class="deliverable-item"><span>Maquettage UX/UI et prototypage interactif</span></li>
+      <li class="deliverable-item"><span>Modélisation UML</span></li>
+      <li class="deliverable-item"><span>Travail en équipe et coordination technique</span></li>`,
+    gallery: [
+      { src: "#", alt: "CoreFlow — Aperçu 1" },
+      { src: "#", alt: "CoreFlow — Aperçu 2" },
+      { src: "#", alt: "CoreFlow — Aperçu 3" },
+      { src: "#", alt: "CoreFlow — Aperçu 4" },
+      { src: "#", alt: "CoreFlow — Aperçu 5" }
+    ],
+    deliverables: `
+      <a href="#" class="deliverable-item">
+        <ion-icon name="logo-figma"></ion-icon>
+        <span>Voir la maquette Figma</span>
+      </a>
+      <a href="#" class="deliverable-item">
+        <ion-icon name="logo-github"></ion-icon>
+        <span>Voir le code source</span>
+      </a>`
+  },
+
   "XBORDER (Conversion MT103)": {
     pageTitle: "Projet: XBORDER (Stage)",
     banner: "./assets/images/projet_Xborder.png", // Image placeholder
