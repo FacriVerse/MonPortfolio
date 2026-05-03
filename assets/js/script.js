@@ -394,6 +394,51 @@ const projectData = {
       </a>`
   },
 
+  "FenziConnect — Plateforme de Gestion": {
+    pageTitle: "Projet: FenziConnect — Plateforme de Gestion",
+    banner: "./assets/images/FenziConnectCover.png",
+    category: "Développement WEB",
+    client: "FenziConnect (Auto-entreprise)",
+    date: "Janvier 2026 – Février 2026",
+    type: "Stage en entreprise — BTS SIO SLAM 2e année",
+    objectif: "Enrichir une plateforme interne existante destinée aux organismes de formation, en créant de nouveaux modules centralisant le suivi pédagogique des stagiaires et la gestion des établissements partenaires. L'objectif était de rendre ces modules opérationnels et de moderniser l'expérience utilisateur globale.",
+    description: "En totale autonomie sur mon périmètre, j'ai conçu et développé de bout en bout deux modules majeurs de l'application. J'ai d'abord modélisé la base de données (UML, scripts SQL) avant de développer les API REST sécurisées côté serveur avec Spring Boot. J'ai ensuite créé les interfaces utilisateur avec Angular, en intégrant des formulaires réactifs, des tableaux de bord historiques et des indicateurs visuels dynamiques (SCSS) pour améliorer l'expérience utilisateur (UX). Les deux modules ont été testés via Postman, validés et mis en production pour les administrateurs de la plateforme.",
+    outils: `
+      <li class="deliverable-item"><span>Java 17 / Spring Boot 3</span></li>
+      <li class="deliverable-item"><span>Angular 16 / TypeScript</span></li>
+      <li class="deliverable-item"><span>SCSS / HTML5</span></li>
+      <li class="deliverable-item"><span>MySQL 8</span></li>
+      <li class="deliverable-item"><span>SweetAlert2</span></li>
+      <li class="deliverable-item"><span>Postman</span></li>
+      <li class="deliverable-item"><span>Git / GitLab / GitHub</span></li>
+      <li class="deliverable-item"><span>Jira / Trello</span></li>`,
+    competences: `
+      <li class="deliverable-item"><span>Développement Full Stack (architecture Front-end et Back-end)</span></li>
+      <li class="deliverable-item"><span>Modélisation de bases de données relationnelles et intégrité des données</span></li>
+      <li class="deliverable-item"><span>Création, sécurisation et consommation d'API REST</span></li>
+      <li class="deliverable-item"><span>Modernisation d'interfaces (UI/UX) et intégration de styles dynamiques</span></li>
+      <li class="deliverable-item"><span>Gestion de projet Agile (Scrum hybride, Jira) et versioning</span></li>
+      <li class="deliverable-item"><span>Tests de bout en bout et mise en production</span></li>`,
+    gallery: [
+      { src: "./assets/images/CaptureFenzi1.png", alt: "FenziConnect — Aperçu 1" },
+      { src: "./assets/images/CaptureFenzi2.png", alt: "FenziConnect — Aperçu 2" },
+      { src: "./assets/images/CaptureFenzi3.png", alt: "FenziConnect — Aperçu 3" },
+      { src: "./assets/images/CaptureFenzi4.png", alt: "FenziConnect — Aperçu 4" },
+      { src: "./assets/images/CaptureFenzi5.png", alt: "FenziConnect — Aperçu 5" },
+      { src: "./assets/images/diagrammeClasseFenziconnect.png", alt: "FenziConnect — Aperçu 6" },
+      { src: "./assets/images/diagrammeSequenceSaveEvalFenziC.png", alt: "FenziConnect — Aperçu 7" }
+    ],
+    deliverables: `
+      <a href="https://www.figma.com/design/Fv8KVb2lawRdFm4W8mD3AB/Untitled?m=auto&t=IaqRQWuUPTNC89mR-6" class="deliverable-item">
+        <ion-icon name="logo-figma"></ion-icon>
+        <span>Voir la maquette Figma</span>
+      </a>
+      <a href="./assets/docs/Rapport_Stage_FenziConnect.pdf" class="deliverable-item" target="_blank">
+        <ion-icon name="document-text-outline"></ion-icon>
+        <span>Voir le Rapport de stage</span>
+      </a>`
+  },
+
   "XBORDER (Conversion MT103)": {
     pageTitle: "Projet: XBORDER (Stage)",
     banner: "./assets/images/projet_Xborder.png", // Image placeholder
@@ -418,7 +463,7 @@ const projectData = {
     gallery: [
       { src: "./assets/images/CaptureGENERATE.PNG", alt: "Résultat de la génération" },
       { src: "./assets/images/CaptureCode1.PNG", alt: "Extrait de code Java (ExcelReader)" },
-      { src: "./assets/images/ScreenCodeRun.PNG", alt: "Terminal d'exécution" }
+      { src: "./assets/images/ScreenCodeRun.PNG", alt: "Terminal d'exécution" },
     ],
     deliverables: `
       <a href="./assets/docs/rapportStage1.pdf" class="deliverable-item" target="_blank">
@@ -477,13 +522,12 @@ function updateProjectDetails(projectName) {
   detailDeliverables.innerHTML = data.deliverables;
 
   // Remplissage de la galerie
-  detailGallery.innerHTML = ""; // On vide la galerie
+  // (Le listener sur detailGallery utilise la délégation d'événements,
+  //  il n'est donc pas nécessaire de le ré-attacher après chaque reconstruction)
+  detailGallery.innerHTML = "";
   data.gallery.forEach(image => {
     detailGallery.innerHTML += `<img src="${image.src}" alt="${image.alt}">`;
   });
-
-  // Après avoir rempli la galerie, on ré-active les écouteurs pour la lightbox
-  addGalleryEventListeners();
 }
 
 // 4. Ajout de l'événement de clic sur les projets de la grille
@@ -520,18 +564,14 @@ projectItems.forEach(item => {
 
 
 // 6. Gestion de la Lightbox (Modale Galerie)
-// (Cette partie ne change pas)
-const galleryModal = document.querySelector("[data-gallery-modal-container]");
+const galleryModal         = document.querySelector("[data-gallery-modal-container]");
 const galleryModalCloseBtn = document.querySelector("[data-gallery-modal-close-btn]");
-const galleryOverlay = document.querySelector("[data-gallery-overlay]");
-const galleryModalImg = document.querySelector("[data-gallery-modal-img]");
+const galleryOverlay       = document.querySelector("[data-gallery-overlay]");
+const galleryModalImg      = document.querySelector("[data-gallery-modal-img]");
 
-if (!galleryModal) console.error("La modale de galerie n'a pas été trouvée");
-if (!galleryModalCloseBtn) console.error("Le bouton de fermeture de la galerie n'a pas été trouvé");
-if (!galleryOverlay) console.error("L'overlay de la galerie n'a pas été trouvé");
-if (!galleryModalImg) console.error("L'image de la modale n'a pas été trouvée");
-
-function openGalleryModal() {
+function openGalleryModal(src, alt) {
+  galleryModalImg.src = src;
+  galleryModalImg.alt = alt;
   galleryModal.classList.add("active");
   galleryOverlay.classList.add("active");
 }
@@ -541,27 +581,16 @@ function closeGalleryModal() {
   galleryOverlay.classList.remove("active");
 }
 
-function addGalleryEventListeners() {
-  if (!detailGallery) {
-    console.error("La galerie n'a pas été trouvée dans le DOM");
-    return;
-  }
-  
-  const galleryImages = detailGallery.querySelectorAll("img");
-  
-  galleryImages.forEach(img => {
-    img.addEventListener("click", function() {
-      if (!galleryModalImg) {
-        console.error("L'élément modal pour l'image n'a pas été trouvé");
-        return;
-      }
-      galleryModalImg.src = this.src;
-      galleryModalImg.alt = this.alt;
-      openGalleryModal();
-    });
-  });
-}
+// Délégation d'événements sur le conteneur de galerie :
+//  - un seul listener, aucun risque de doublons même quand la galerie est reconstruite
+//  - stopPropagation() bloque la remontée de l'événement vers le document
+detailGallery.addEventListener("click", function (event) {
+  const img = event.target.closest("img");
+  if (!img) return;
+  event.stopPropagation(); // ← bloque la remontée vers le document global
+  openGalleryModal(img.src, img.alt);
+});
 
+// Fermeture via le bouton ✕ ou un clic sur l'overlay
 galleryModalCloseBtn.addEventListener("click", closeGalleryModal);
 galleryOverlay.addEventListener("click", closeGalleryModal);
-addGalleryEventListeners();
