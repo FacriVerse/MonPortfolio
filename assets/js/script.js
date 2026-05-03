@@ -347,7 +347,7 @@ const projectData = {
 
   "CoreFlow — Module de Gestion Documentaire": {
     pageTitle: "Projet: CoreFlow — Module de Gestion Documentaire",
-    banner: "./assets/images/projet_CoreFlow.png",
+    banner: "./assets/images/coreflowCover.jpg",
     category: "Développement WEB",
     client: "Projet scolaire — ESIC Malkoff",
     date: "Décembre 2025 – Avril 2026",
@@ -377,18 +377,18 @@ const projectData = {
       <li class="deliverable-item"><span>Modélisation UML</span></li>
       <li class="deliverable-item"><span>Travail en équipe et coordination technique</span></li>`,
     gallery: [
-      { src: "#", alt: "CoreFlow — Aperçu 1" },
-      { src: "#", alt: "CoreFlow — Aperçu 2" },
-      { src: "#", alt: "CoreFlow — Aperçu 3" },
-      { src: "#", alt: "CoreFlow — Aperçu 4" },
-      { src: "#", alt: "CoreFlow — Aperçu 5" }
+      { src: "./assets/images/CaptureCoreflowFront.png", alt: "CoreFlow — image du front-end formulaire" },
+      { src: "./assets/images/Copie de Diagramme de classe gestion doc.drawio.png", alt: "CoreFlow — Aperçu 2" },
+      { src: "./assets/images/CaptureCoreflowTest.png", alt: "CoreFlow — Aperçu 3" },
+      { src: "./assets/images/CaptureCoreflowScreen2.png", alt: "CoreFlow — Aperçu 4" },
+      { src: "./assets/images/diagramme de sequence partie gestion doc.png", alt: "CoreFlow — Aperçu 5" }
     ],
     deliverables: `
-      <a href="#" class="deliverable-item">
+      <a href="https://www.figma.com/make/ywKTOn9ssC9PoTfDNT7KYP/CoreFlowGestionDocFrames?fullscreen=1&t=AH3lDJuH4mCRGpbs-1" class="deliverable-item">
         <ion-icon name="logo-figma"></ion-icon>
         <span>Voir la maquette Figma</span>
       </a>
-      <a href="#" class="deliverable-item">
+      <a href="https://github.com/2026-BTS-SIO2-ESIC/CoreFlow" class="deliverable-item">
         <ion-icon name="logo-github"></ion-icon>
         <span>Voir le code source</span>
       </a>`
